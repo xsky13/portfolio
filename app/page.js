@@ -35,7 +35,7 @@ export default function Home() {
         const options = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.6, // Trigger when 60% of the section is visible
+            threshold: 0.6,
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -46,7 +46,6 @@ export default function Home() {
             });
         }, options);
 
-        // Observe all sections
         Object.values(sections).forEach((item) => {
             if (item.ref.current) {
                 observer.observe(item.ref.current);
@@ -54,7 +53,6 @@ export default function Home() {
         });
 
         return () => {
-            // Clean up the observer
             Object.values(sections).forEach((item) => {
                 if (item.ref.current) {
                     observer.unobserve(item.ref.current);
@@ -65,7 +63,7 @@ export default function Home() {
 
     return (
         <div>
-            <div className="fixed top-[40%]">
+            <div className="hidden lg:block fixed top-[40%]">
                 <ul className="ml-6 text-sm">
                     {Object.values(sections).map((key) => (
                         <li className="list-item" key={key.id}>
@@ -81,22 +79,20 @@ export default function Home() {
                     ))}
                 </ul>
             </div>
-            <div id="home" ref={sections.home.ref} className="h-screen flex justify-center items-center">
-                <Image
+            <div id="home" ref={sections.home.ref} className="h-screen flex flex-col md:flex-row justify-center items-center">
+                <img
                     src="/profile.png"
-                    className="rounded-full"
-                    width={250}
-                    height={250}
+                    className="rounded-full w-5/12 md:w-2/12"
                     alt="profile picture"
                 />
-                <div className="ml-5">
-                    <h1 className="uppercase text-8xl font-thin">
+                <div className="md:ml-5">
+                    <h1 className="uppercase text-6xl text-center md:text-8xl font-thin">
                         Jared <br /> Peter
                     </h1>
                     <span className="font-bold uppercase">Desarrollador web full-stack</span>
                 </div>
             </div>
-            <div className="block m-auto w-5/12">
+            <div className="block m-auto w-10/12 lg:w-5/12">
                 <section id="about" ref={sections.about.ref}>
                     <About />
                 </section>

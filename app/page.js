@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import About from "./components/About";
@@ -6,27 +6,27 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact";
 
 export default function Home() {
-    const [section, setSection] = useState('home');
+    const [section, setSection] = useState("home");
 
     const sections = {
         home: {
-            text: 'Arriba',
-            id: 'home',
+            text: "Arriba",
+            id: "home",
             ref: useRef(null),
         },
         about: {
-            text: 'Acerca',
-            id: 'about',
+            text: "Acerca",
+            id: "about",
             ref: useRef(null),
         },
         projects: {
-            text: 'Proyectos',
-            id: 'projects',
+            text: "Proyectos",
+            id: "projects",
             ref: useRef(null),
         },
         contact: {
-            text: 'Contactar',
-            id: 'contact',
+            text: "Contactar",
+            id: "contact",
             ref: useRef(null),
         },
     };
@@ -34,7 +34,7 @@ export default function Home() {
     useEffect(() => {
         const options = {
             root: null,
-            rootMargin: '0px',
+            rootMargin: "0px",
             threshold: 0.6,
         };
 
@@ -74,12 +74,18 @@ export default function Home() {
                             >
                                 {key.text}
                             </a>
-                            <div className={`link-border ${section === key.id ? 'active' : ''}`}></div>
+                            <div
+                                className={`link-border ${section === key.id ? "active" : ""}`}
+                            ></div>
                         </li>
                     ))}
                 </ul>
             </div>
-            <div id="home" ref={sections.home.ref} className="h-screen flex flex-col md:flex-row justify-center items-center">
+            <div
+                id="home"
+                ref={sections.home.ref}
+                className="h-screen flex flex-col md:flex-row justify-center items-center"
+            >
                 <img
                     src="/profile.png"
                     className="rounded-full w-5/12 md:w-2/12"
@@ -89,7 +95,9 @@ export default function Home() {
                     <h1 className="uppercase text-6xl text-center md:text-8xl font-thin">
                         Jared <br /> Peter
                     </h1>
-                    <span className="font-bold uppercase">Desarrollador web full-stack</span>
+                    <span className="font-bold uppercase">
+                        Desarrollador web full-stack
+                    </span>
                 </div>
             </div>
             <div className="block m-auto w-10/12 lg:w-5/12">

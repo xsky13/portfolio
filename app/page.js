@@ -10,7 +10,7 @@ export default function Home() {
 
     const sections = {
         home: {
-            text: "Arriba",
+            text: "Inicio",
             id: "home",
             ref: useRef(null),
         },
@@ -80,6 +80,29 @@ export default function Home() {
                         </li>
                     ))}
                 </ul>
+            </div>
+            <div className="hidden lg:block fixed bottom-[5%]">
+                <a
+                    href="https://github.com/xsky13"
+                    target="_blank"
+                    className="flex gap-2 items-center ml-6 group"
+                >
+                    <img src="/Github_Invertocat_White.svg" width={20} />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="size-4 transition-transform ease-out duration-300 group-hover:translate-x-2"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                        />
+                    </svg>
+                </a>
             </div>
             <div
                 id="home"

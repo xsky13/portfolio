@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import About from "./components/About";
 import Projects from "./components/Projects/Projects";

@@ -3,50 +3,49 @@
 @tailwind utilities;
 
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
-	--border: #efefef;
+    --background: #ffffff;
+    --foreground: #171717;
+    --border: #efefef;
 }
 
-
 @media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--border: #1b1b1b;
-		--foreground: #ededed;
-	}
+    :root {
+        --background: #0a0a0a;
+        --border: #1b1b1b;
+        --foreground: #ededed;
+    }
 }
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-	color: var(--foreground);
-	background: var(--background);
-	font-family: Arial, Helvetica, sans-serif;
-	overflow-x: hidden;
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 .light {
-	background: #ffffff;
-	color: #171717;
+    background: #ffffff;
+    color: #171717;
 }
 
 body {
-	@apply font-[family-name:var(--font-geist-sans)];
+    @apply font-[family-name:var(--font-geist-sans)];
 }
 
 h1 {
-	@apply text-5xl font-bold;
+    @apply text-5xl font-bold;
 }
 
 h2 {
-	@apply text-4xl;
+    @apply text-4xl;
 }
 
 .link {
-	@apply border-b hover:text-foreground;
+    @apply border-b hover:text-foreground;
 }
 
 .list-item {
@@ -60,6 +59,3 @@ h2 {
 .list-item .link-border.active {
     @apply w-full;
 }
-
-
-

@@ -66,7 +66,7 @@ export default function Home() {
             <div className="hidden lg:block fixed top-[40%]">
                 <ul className="ml-6 text-sm">
                     {Object.values(sections).map((key) => (
-                        <li className="list-item" key={key.id}>
+                        <li className="list-item group" key={key.id}>
                             <a
                                 href={`#${key.id}`}
                                 className="block"
@@ -75,7 +75,7 @@ export default function Home() {
                                 {key.text}
                             </a>
                             <div
-                                className={`link-border ${section === key.id ? "active" : ""}`}
+                                className={`link-border ${section === key.id ? "active" : "group-hover:w-6/12"}`}
                             ></div>
                         </li>
                     ))}

@@ -87,7 +87,7 @@ export default function Home() {
                     target="_blank"
                     className="flex gap-2 items-center ml-6 group"
                 >
-                    <img src="/Github_Invertocat_White.svg" width={20} />
+                    <img src="/GitHub_Invertocat_White.svg" width={20} />
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
